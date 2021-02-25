@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es6",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "allowJs": false,
+    "moduleResolution": "node",
+    "outDir": "dist/lib",
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "baseUrl": ".",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  },
+  "compileOnSave": false,
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.ts"
+  ]
+}
