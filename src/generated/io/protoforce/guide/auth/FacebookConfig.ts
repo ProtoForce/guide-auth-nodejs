@@ -20,7 +20,7 @@ export interface FacebookConfigDefn extends WithRTTI {
 /**
   * Class io.protoforce.guide.auth:FacebookConfig
   * 
-  * Defined at config.pfm @ 7:1
+  * Defined at config.pfm @ 2:1
   */
 export class FacebookConfig implements FacebookConfigDefn {
   // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
