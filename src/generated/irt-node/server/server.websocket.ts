@@ -203,16 +203,12 @@ export class WebSocketServerGeneric<C, ZC = unknown> {
         this.server.on('request', async (request: wsRequest) => {
             logger.logf(LogLevel.Trace, 'Incoming connection from ' + request.origin);
 
-            const context = new ConnectionContext<C, WebSocketServerTransportContext>();
-            context.system = new SystemContext();
-
             for (const hook of hooks) {
                 if (!hook.onConnect) {
                     continue;
                 }
 
                 const hookData = {
-                    context,
                     options: this.options,
                     request
                 };
@@ -230,12 +226,12 @@ export class WebSocketServerGeneric<C, ZC = unknown> {
                 return;
             }
 
-            var connection = request.accept(undefined, request.origin);
-            context.system.transport = {
+            const connection = request.accept(undefined, request.origin);
+            const context = new ConnectionContext<C, WebSocketServerTransportContext>({
                 connection,
                 messageHeaders: {},
                 send: this.buzzerSendClosure(connection)
-            };
+            });
 
             for (const hook of hooks) {
                 if (!hook.onConnected) {

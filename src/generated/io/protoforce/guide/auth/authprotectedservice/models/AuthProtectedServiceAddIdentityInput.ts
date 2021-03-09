@@ -35,10 +35,8 @@ export class AuthProtectedServiceAddIdentityInput implements AuthProtectedServic
   static readonly RTTI_CLASS: string = 'AddIdentityInput';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth.authprotectedservice.models:AddIdentityInput';
   
-  constructor(data?: {identity: SecondaryIdentity}, skipDefaults?: boolean | undefined) {
-    if (!data) {
-      return;
-    }
+  constructor(data: {identity: SecondaryIdentity}) {
+    
     this.identity = data.identity;
   }
   

@@ -41,11 +41,13 @@ export class SigninResponseConfirm2FA implements SigninResponseConfirm2FADefn {
     *    "We've sent you an SMS to number +1XXXXXXX123"
     *    "Please use "
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   message: string;
   /**
     * Token is used to hold information about the authentication
     *    attempt
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   token: string;
   static readonly RTTI_CLASS: string = 'Confirm2FA';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth/SigninResponse:Confirm2FA';

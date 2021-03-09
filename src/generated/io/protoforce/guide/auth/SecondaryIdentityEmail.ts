@@ -32,6 +32,7 @@ export class SecondaryIdentityEmail implements SecondaryIdentityEmailDefn {
   /**
     * Email
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   email: string;
   static readonly RTTI_CLASS: string = 'Email';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth/SecondaryIdentity:Email';

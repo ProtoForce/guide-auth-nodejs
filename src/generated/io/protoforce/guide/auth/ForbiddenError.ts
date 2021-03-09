@@ -35,7 +35,7 @@ export class ForbiddenError extends RuntimeError implements WithRTTI {
   static readonly RTTI_CLASS: string = 'ForbiddenError';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth:ForbiddenError';
   
-  constructor(data: {message: string}, skipDefaults?: boolean | undefined) {
+  constructor(data: {message: string}) {
     super({message: data.message})
     
     this.message = data.message;

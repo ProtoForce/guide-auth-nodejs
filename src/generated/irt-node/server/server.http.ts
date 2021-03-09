@@ -32,6 +32,7 @@ import {
 } from '../../irt';
 
 import { HTTPServerHooks } from './server.hooks';
+import {isObject} from "../../irt/transport/rest/common";
 
 export interface HTTPServerTransportContext {
     request: http.IncomingMessage;
@@ -397,10 +398,13 @@ export abstract class HttpServerGeneric<C, T> {
                             outContentType,
                             [ContentType.ApplicationJson, ContentType.TextJson]
                             ) && outMaybeProxy instanceof EncoderProxy) {
-                                const eitherKeys = typeof outMaybeProxy.data === 'object' && outMaybeProxy.data !== null ? Object.keys(outMaybeProxy.data).filter(k => typeof (outMaybeProxy.data as object)[k] !== 'undefined') : [];
+                                const eitherKeys = isObject(outMaybeProxy.data)  ?
+                                        Object.keys(outMaybeProxy.data).filter(k => typeof (outMaybeProxy.data as {[key: string]: unknown})[k] !== 'undefined') :
+                                        [];
+
                             if (eitherKeys.length === 1) {
                                 const eitherKey = eitherKeys[0];
-                                outMaybeProxy.data = (outMaybeProxy.data as object)[eitherKey];
+                                outMaybeProxy.data = (outMaybeProxy.data as {[key: string]: unknown})[eitherKey];
                                 if (eitherKey === 'right') {
                                     respHeaders[XHeaders.Success] = XSuccessHeader.Right;
                                 } else {
@@ -499,12 +503,10 @@ export class HttpServer<C = void> extends HttpServerGeneric<C, HTTPServerTranspo
 
     protected async serverRequestHandler(request: http.IncomingMessage, response: http.ServerResponse) {
         const { logger, hooks } = this.options;
-        const context = new ConnectionContext<C, HTTPServerTransportContext>();
-        context.system = new SystemContext();
-        context.system.transport = {
+        const context = new ConnectionContext<C, HTTPServerTransportContext>({
             request,
             response
-        };
+        });
         if (request.headers.authorization) {
             context.system.auth.updateFromValue(request.headers.authorization);
         }
@@ -535,7 +537,7 @@ export class HttpServer<C = void> extends HttpServerGeneric<C, HTTPServerTranspo
         }
 
         const r: HTTPServerRequest = {
-            method: HTTPMethod[request.method],
+            method: request.method!.toUpperCase() as HTTPMethod,
             path: request.url,
             headers: request.headers,
         };

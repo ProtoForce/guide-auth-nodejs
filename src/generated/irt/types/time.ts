@@ -8,9 +8,13 @@ const EXPECTED_FORMAT = 'Time has to be in the format HH:MM:[SS][.S-SSSSSSSSS]';
  * IRTTime defines a time object, which only holds hours, minutes, seconds, and nanoseconds
  */
 export class IRTTime implements WithEncoder<string> {
+    // @ts-ignore TS incorrectly assumes this won't be initialized in the constructor
     private _hours: number;
+    // @ts-ignore TS incorrectly assumes this won't be initialized in the constructor
     private _minutes: number;
+    // @ts-ignore TS incorrectly assumes this won't be initialized in the constructor
     private _seconds: number;
+    // @ts-ignore TS incorrectly assumes this won't be initialized in the constructor
     private _nano: number;
 
     /**

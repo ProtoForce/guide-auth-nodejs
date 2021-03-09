@@ -32,7 +32,9 @@ export enum IRTDateTimeFormat {
  * This class solves the issue and supports variable precision.
  */
 export class IRTDateTime implements WithEncoder<string> {
+    // @ts-ignore TS incorrectly assumes this won't be initialized in the constructor
     protected _date: Date;
+    // @ts-ignore TS incorrectly assumes this won't be initialized in the constructor
     protected _nano: number;
     protected _offset?: number;
     protected _format: IRTDateTimeFormat;

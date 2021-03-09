@@ -39,11 +39,13 @@ export class MFAMethodPendingApp implements MFAMethodPendingAppDefn {
     * Secret to be stored on the client only, this is the only
     *    time it will be avaialble.
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   secret: string;
   /**
     * Token to be preserved and passed into the confirmation of the
     *    MFA setup.
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   token: string;
   static readonly RTTI_CLASS: string = 'App';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth/MFAMethodPending:App';

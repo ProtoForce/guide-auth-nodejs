@@ -36,7 +36,7 @@ export class InternalError extends RuntimeError implements WithRTTI {
   static readonly RTTI_CLASS: string = 'InternalError';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth:InternalError';
   
-  constructor(data: {message: string}, skipDefaults?: boolean | undefined) {
+  constructor(data: {message: string}) {
     super({message: data.message})
     
     this.message = data.message;

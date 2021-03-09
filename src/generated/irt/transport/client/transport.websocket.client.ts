@@ -32,6 +32,7 @@ import { WithRTTI } from '../../rtti';
 
 export class WebSocketClientTransport<C, ZC = unknown> implements ClientSocketTransport<C> {
     protected supported: boolean;
+    // @ts-ignore TS will think wsc is not ready, but it will never be used if not supported
     protected wsc: WSClient;
     protected endpoint: string;
     protected options: HTTPWebsocketClientTransportOptions<ZC>;
@@ -45,23 +46,24 @@ export class WebSocketClientTransport<C, ZC = unknown> implements ClientSocketTr
         options: Partial<HTTPWebsocketClientTransportOptions<ZC>> = {},
         buzzers: ServiceDispatcher<ZC>[] = []
     ) {
-        this.supported = !!(WebSocket || (window && !!window['WebSocket']));
-        if (!this.supported) {
-            return;
-        }
-
+        this.endpoint = endpoint;
+        this.requests = {};
+        this.buzzers = {};
         this.options = {
             // @ts-ignore See if we can split this default into two sections, one being generic
             ...(defaultHTTPWebsocketClientTransportOptions as HTTPWebsocketClientTransportOptions<ZC>),
             ...options
         };
 
-        this.buzzers = {};
+        this.supported = !!(WebSocket || (window && !!window['WebSocket']));
+        if (!this.supported) {
+            return;
+        }
+
         buzzers.forEach(buz => {
             this.buzzers[buz.RTTI_CLASS] = buz;
         });
 
-        this.endpoint = endpoint;
         this.wsc = new WSClient();
         this.wsc.open(endpoint, this.options.protocols);
         this.onMessage = this.onMessage.bind(this);
@@ -69,7 +71,6 @@ export class WebSocketClientTransport<C, ZC = unknown> implements ClientSocketTr
         this.onConnect = this.onConnect.bind(this);
         this.onDisconnect = this.onDisconnect.bind(this);
         this.onConnecting = this.onConnecting.bind(this);
-        this.requests = {};
         this.wsc.onMessage = this.onMessage.bind(this);
         this.wsc.onError = this.onError.bind(this);
         this.wsc.onConnect = this.onConnect.bind(this);

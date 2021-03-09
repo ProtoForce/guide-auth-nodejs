@@ -35,10 +35,8 @@ export class AuthServiceSigninInput implements AuthServiceSigninInputDefn {
   static readonly RTTI_CLASS: string = 'SigninInput';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth.authservice.models:SigninInput';
   
-  constructor(data?: {with_: SignIn}, skipDefaults?: boolean | undefined) {
-    if (!data) {
-      return;
-    }
+  constructor(data: {with_: SignIn}) {
+    
     this.with_ = data.with_;
   }
   

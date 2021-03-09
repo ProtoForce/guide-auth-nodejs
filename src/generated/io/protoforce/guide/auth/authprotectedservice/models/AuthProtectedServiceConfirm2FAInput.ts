@@ -35,10 +35,8 @@ export class AuthProtectedServiceConfirm2FAInput implements AuthProtectedService
   static readonly RTTI_CLASS: string = 'Confirm2FAInput';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth.authprotectedservice.models:Confirm2FAInput';
   
-  constructor(data?: {method: MFAMethodConfirm}, skipDefaults?: boolean | undefined) {
-    if (!data) {
-      return;
-    }
+  constructor(data: {method: MFAMethodConfirm}) {
+    
     this.method = data.method;
   }
   

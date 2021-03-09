@@ -43,7 +43,9 @@ export interface UserDefn extends WithRTTI {
   * Defined at user.pfm @ 19:1
   */
 export class User implements UserDefn {
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   name: string;
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   id: UserID;
   /**
     * Verified user is the one who signed up with a provider which validated
@@ -51,6 +53,7 @@ export class User implements UserDefn {
     *    If a user has many secondary identities, this boolean denotes when they
     *    have at least one secondary identity verified.
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   verified: boolean;
   static readonly RTTI_CLASS: string = 'User';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth:User';

@@ -35,10 +35,8 @@ export class AuthProtectedServiceRemoveIdentityInput implements AuthProtectedSer
   static readonly RTTI_CLASS: string = 'RemoveIdentityInput';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth.authprotectedservice.models:RemoveIdentityInput';
   
-  constructor(data?: {identity: SecondaryIdentity}, skipDefaults?: boolean | undefined) {
-    if (!data) {
-      return;
-    }
+  constructor(data: {identity: SecondaryIdentity}) {
+    
     this.identity = data.identity;
   }
   

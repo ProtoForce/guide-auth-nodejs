@@ -42,10 +42,12 @@ export class KnownIdentities implements KnownIdentitiesDefn {
   /**
     * Confirmed identities
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   confirmed: SecondaryIdentity[];
   /**
     * Unconfirmed identities
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   unconfirmed: SecondaryIdentity[];
   static readonly RTTI_CLASS: string = 'KnownIdentities';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth:KnownIdentities';

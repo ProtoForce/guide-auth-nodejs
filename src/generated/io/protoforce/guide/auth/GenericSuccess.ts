@@ -27,6 +27,7 @@ export interface GenericSuccessDefn extends WithRTTI {
   * Defined at auth.service.pfm @ 14:1
   */
 export class GenericSuccess implements GenericSuccessDefn {
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   message?: string | undefined;
   static readonly RTTI_CLASS: string = 'GenericSuccess';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth:GenericSuccess';

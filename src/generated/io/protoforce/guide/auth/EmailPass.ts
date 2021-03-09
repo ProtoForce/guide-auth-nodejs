@@ -33,7 +33,9 @@ export class EmailPass implements EmailPassDefn {
   /**
     * User email
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   email: string;
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   pass: string;
   static readonly RTTI_CLASS: string = 'EmailPass';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth:EmailPass';

@@ -36,10 +36,12 @@ export class SignInTwoFactor implements SignInTwoFactorDefn {
   /**
     * Token which was provided in the SigninResponse.Confirm2FA model
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   token: string;
   /**
     * Code from a secondary authentication method
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   code: string;
   static readonly RTTI_CLASS: string = 'TwoFactor';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth/SignIn:TwoFactor';

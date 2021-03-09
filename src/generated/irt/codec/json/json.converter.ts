@@ -17,6 +17,7 @@ export class JSONConverter {
     static withTypeField = <T extends WithRTTI & WithEncoder<TS>, TS>(value: T, field: string, name?: string): JSONWithTypeField<TS> => {
         const typeName = name || value.RTTI_FQN;
         const values = value.toJSON();
+        // @ts-ignore values in this case is an object
         const existingField = values[field];
         const fieldValue =
                 typeof existingField === 'undefined' ? typeName :

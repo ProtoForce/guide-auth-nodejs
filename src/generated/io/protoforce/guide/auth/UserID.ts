@@ -18,6 +18,7 @@ import {
   * Defined at user.pfm @ 5:1
   */
 export class UserID implements WithRTTI {
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   private _id: string;
   static readonly RTTI_CLASS: string = 'UserID';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth:UserID';

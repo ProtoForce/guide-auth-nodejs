@@ -44,6 +44,7 @@ export class TwitterAuth implements TwitterAuthDefn {
   /**
     * OAuth token
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   accessToken: string;
   static readonly RTTI_CLASS: string = 'TwitterAuth';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth:TwitterAuth';

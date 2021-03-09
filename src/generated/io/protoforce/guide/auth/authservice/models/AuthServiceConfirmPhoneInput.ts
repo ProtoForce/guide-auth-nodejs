@@ -34,14 +34,8 @@ export class AuthServiceConfirmPhoneInput implements AuthServiceConfirmPhoneInpu
   static readonly RTTI_CLASS: string = 'ConfirmPhoneInput';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth.authservice.models:ConfirmPhoneInput';
   
-  constructor(data?: {code: string, phone: string}, skipDefaults?: boolean | undefined) {
-    if (!data) {
-      if (!skipDefaults) {
-        this.code = '';
-        this.phone = '';
-      }
-      return;
-    }
+  constructor(data: {code: string, phone: string}) {
+    
     this.code = data.code;
     this.phone = data.phone;
   }

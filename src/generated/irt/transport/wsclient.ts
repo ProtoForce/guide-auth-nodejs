@@ -33,11 +33,11 @@ export class WSClient {
     private _attempts: number;
     private _forceClose: boolean;
 
-    public onConnect: () => void;
-    public onConnecting: (code: number) => void;
-    public onDisconnect: (code: number, timedOut: boolean) => void;
-    public onMessage: (data: any) => void;
-    public onError: (event: Event) => void;
+    public onConnect?: () => void;
+    public onConnecting?: (code: number) => void;
+    public onDisconnect?: (code: number, timedOut: boolean) => void;
+    public onMessage?: (data: any) => void;
+    public onError?: (event: Event) => void;
 
     public get state(): WSClientState {
         return this._state;

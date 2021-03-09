@@ -58,14 +58,17 @@ export interface SignUpPhoneDefn extends WithRTTI {
   * Defined at auth.signup.pfm @ 22:3
   */
 export class SignUpPhone implements SignUpPhoneDefn {
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   timezone: string;
   /**
     * Phone number in an international format: +1 XXX XXX XXXX
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   number_: string;
   /**
     * Password
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   pass: string;
   static readonly RTTI_CLASS: string = 'Phone';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth/SignUp:Phone';
@@ -113,13 +116,13 @@ export class SignUpPhone implements SignUpPhoneDefn {
   static fromPhonePass(from: PhonePass, timezone: string): SignUpPhone {
     return new SignUpPhone({
       timezone: timezone,
-      number_: from.number,
+      number_: from.number_,
       pass: from.pass
     });
   }
   
   loadPhonePass(from: PhonePass): void {
-    this.number_ = from.number;
+    this.number_ = from.number_;
     this.pass = from.pass;
   }
   

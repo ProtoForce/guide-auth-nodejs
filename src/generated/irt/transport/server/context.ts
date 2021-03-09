@@ -15,8 +15,8 @@ export class ConnectionContext<C, T> {
      */
     public user: C | undefined;
 
-    constructor(user?: C) {
-        this.system = new SystemContext<T>();
+    constructor(transport: T, user?: C) {
+        this.system = new SystemContext<T>(transport);
         this.user = user;
     }
 }

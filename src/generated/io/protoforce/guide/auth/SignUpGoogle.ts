@@ -69,10 +69,12 @@ export interface SignUpGoogleDefn extends WithRTTI {
   * Defined at auth.signup.pfm @ 28:3
   */
 export class SignUpGoogle implements SignUpGoogleDefn {
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   timezone: string;
   /**
     * OAuth token
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   accessToken: string;
   static readonly RTTI_CLASS: string = 'Google';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth/SignUp:Google';

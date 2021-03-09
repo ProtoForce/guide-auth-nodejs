@@ -36,10 +36,12 @@ export class PhonePass implements PhonePassDefn {
   /**
     * Phone number in an international format: +1 XXX XXX XXXX
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   number_: string;
   /**
     * Password
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   pass: string;
   static readonly RTTI_CLASS: string = 'PhonePass';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth:PhonePass';

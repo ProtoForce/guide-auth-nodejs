@@ -30,6 +30,7 @@ import { WithRTTI } from '../../rtti';
 import { PromiseEx } from '../../types';
 
 export class HTTPClientTransport<C = void, R extends HTTPClientResponse = HTTPClientResponse> implements ClientTransport<C> {
+    // @ts-ignore TS incorrectly assumes this won't be initialized in the constructor
     private endpoint: string;
     private options: HTTPClientTransportOptions<R>;
 

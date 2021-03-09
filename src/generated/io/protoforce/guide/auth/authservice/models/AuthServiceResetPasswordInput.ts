@@ -35,10 +35,8 @@ export class AuthServiceResetPasswordInput implements AuthServiceResetPasswordIn
   static readonly RTTI_CLASS: string = 'ResetPasswordInput';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth.authservice.models:ResetPasswordInput';
   
-  constructor(data?: {lookup: UserLookup}, skipDefaults?: boolean | undefined) {
-    if (!data) {
-      return;
-    }
+  constructor(data: {lookup: UserLookup}) {
+    
     this.lookup = data.lookup;
   }
   

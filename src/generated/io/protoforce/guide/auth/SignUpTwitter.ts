@@ -69,10 +69,12 @@ export interface SignUpTwitterDefn extends WithRTTI {
   * Defined at auth.signup.pfm @ 46:3
   */
 export class SignUpTwitter implements SignUpTwitterDefn {
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   timezone: string;
   /**
     * OAuth token
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   accessToken: string;
   static readonly RTTI_CLASS: string = 'Twitter';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth/SignUp:Twitter';

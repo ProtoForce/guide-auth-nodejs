@@ -35,7 +35,7 @@ export class NotFoundError extends RuntimeError implements WithRTTI {
   static readonly RTTI_CLASS: string = 'NotFoundError';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth:NotFoundError';
   
-  constructor(data: {message: string}, skipDefaults?: boolean | undefined) {
+  constructor(data: {message: string}) {
     super({message: data.message})
     
     this.message = data.message;

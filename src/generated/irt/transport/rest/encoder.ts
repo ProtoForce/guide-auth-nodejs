@@ -7,6 +7,7 @@ import {
     OnWireType,
     OnWireGeneric
 } from './wire';
+import { isObject } from './common';
 
 /**
  * Encodes a type into an URI value
@@ -80,7 +81,7 @@ export function encodeURIValue(value: unknown, ref: TypeRef): string {
             if (ref.args.length !== 2) {
                 throw new Error('Map expects two args');
             }
-            if (typeof value !== 'object' || value === null) {
+            if (!isObject(value)) {
                 throw new Error('object type is expected for ref.id ' + ref.id);
             }
 

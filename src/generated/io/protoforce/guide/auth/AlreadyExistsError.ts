@@ -35,7 +35,7 @@ export class AlreadyExistsError extends RuntimeError implements WithRTTI {
   static readonly RTTI_CLASS: string = 'AlreadyExistsError';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth:AlreadyExistsError';
   
-  constructor(data: {message: string}, skipDefaults?: boolean | undefined) {
+  constructor(data: {message: string}) {
     super({message: data.message})
     
     this.message = data.message;

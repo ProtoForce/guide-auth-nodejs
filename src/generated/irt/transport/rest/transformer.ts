@@ -1,5 +1,5 @@
 import { ExtractorSpec, RestSpec } from './specs';
-import { BasicField } from './common';
+import { isObject, BasicField } from './common';
 import { encodeWireType, decodeURIValue } from './encoder';
 
 function payloadError(
@@ -18,17 +18,20 @@ function extractField(
     field: BasicField,
     optional?: boolean
 ): unknown {
-    if (typeof payload !== 'object' || payload === null) {
+    if (!isObject(payload)) {
         throw new Error(payloadError('Expected object', payload, [...path, field]));
     }
 
     let pathObjects = [{ key: '', obj: payload }];
-    let value = payload;
+    let value: {[key: string]: unknown} | unknown = payload;
 
     for (let i = 0; i < path.length; i++) {
         const f = path[i];
         switch (typeof value) {
             case 'object':
+                if (!isObject(value)) {
+                    throw new Error(payloadError('Expected object', payload, [...path, field]));
+                }
                 pathObjects.push({ key: f.name, obj: value });
                 value = value[f.name];
                 // Because we do clean ups at each iteration of field
@@ -86,7 +89,7 @@ function insertField(
 ) {
     let obj = payload;
     for (let i = 0; i < path.length; i++) {
-        if (typeof obj !== 'object' || obj === null) {
+        if (!isObject(obj)) {
             throw new Error(
                 payloadError('Expected object', payload, [...path, field])
             );
@@ -100,7 +103,7 @@ function insertField(
         obj = obj[p.name];
     }
 
-    if (typeof obj !== 'object' || obj === null) {
+    if (!isObject(obj)) {
         throw new Error(payloadError('Expected object', payload, [...path, field]));
     }
 

@@ -14,3 +14,8 @@ export interface BasicField {
      */
     ref: TypeRef;
 }
+
+export function isObject(value: any): value is {[key: string]: any}  {
+    const invalid = typeof value !== 'object' || value === null || Array.isArray(value)
+    return !invalid;
+}

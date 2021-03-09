@@ -7,6 +7,7 @@ const EXPECTED_FORMAT = 'Date has to be in the format YYYY-MM-DD';
  * IRTDate date type, supports encoding and decoding in JSON
  */
 export class IRTDate implements WithEncoder<string> {
+    // @ts-ignore TS incorrectly assumes this won't be initialized in the constructor
     private _value: Date;
 
     /**

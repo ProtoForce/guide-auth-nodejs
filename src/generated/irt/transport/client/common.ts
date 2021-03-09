@@ -110,6 +110,8 @@ export type HTTPClientTransportOptions<R extends HTTPClientResponse = HTTPClient
     requestFunction:    HTTPRequestFunction<R>;
 };
 
+// This will help detecting if XMLHttpRequest is available
+declare var XMLHttpRequest: any;
 export const defaultHTTPClientTransportOptions: HTTPClientTransportOptions = {
     ...defaultHTTPClientTransportCommonOptions,
     useServiceFQN:      false,

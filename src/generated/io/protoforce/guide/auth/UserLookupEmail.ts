@@ -26,6 +26,7 @@ export interface UserLookupEmailDefn extends WithRTTI {
   * Defined at auth.service.pfm @ 57:3
   */
 export class UserLookupEmail implements UserLookupEmailDefn {
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   email: string;
   static readonly RTTI_CLASS: string = 'Email';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth/UserLookup:Email';

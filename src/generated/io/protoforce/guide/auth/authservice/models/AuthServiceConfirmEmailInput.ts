@@ -32,13 +32,8 @@ export class AuthServiceConfirmEmailInput implements AuthServiceConfirmEmailInpu
   static readonly RTTI_CLASS: string = 'ConfirmEmailInput';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth.authservice.models:ConfirmEmailInput';
   
-  constructor(data?: {code: string}, skipDefaults?: boolean | undefined) {
-    if (!data) {
-      if (!skipDefaults) {
-        this.code = '';
-      }
-      return;
-    }
+  constructor(data: {code: string}) {
+    
     this.code = data.code;
   }
   

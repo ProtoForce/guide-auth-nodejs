@@ -30,6 +30,7 @@ export interface SigninSuccessResponseDefn extends WithRTTI {
   * Defined at auth.service.pfm @ 6:1
   */
 export class SigninSuccessResponse implements SigninSuccessResponseDefn {
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   user: User;
   static readonly RTTI_CLASS: string = 'SigninSuccessResponse';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth:SigninSuccessResponse';

@@ -32,6 +32,7 @@ export class SecondaryIdentityPhone implements SecondaryIdentityPhoneDefn {
   /**
     * Phone number in international format
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   phone: string;
   static readonly RTTI_CLASS: string = 'Phone';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth/SecondaryIdentity:Phone';

@@ -66,14 +66,12 @@ export class LambdaHttpServer<C = void, LContext = void, LCallback = void> exten
     }
 
     protected async serverRequestHandler(lr: LambdaResponse, event: LambdaELBEvent, lc: LContext, callback: LCallback) {
-        const context = new ConnectionContext<C, LambdaHTTPServerTransportContext<LContext, LCallback>>();
-        context.system = new SystemContext();
-        context.system.transport = {
+        const context = new ConnectionContext<C, LambdaHTTPServerTransportContext<LContext, LCallback>>({
             resp: lr,
             context: lc,
             callback,
             event
-        };
+        });
         if (event.headers.authorization) {
             context.system.auth.updateFromValue(event.headers.authorization);
         }

@@ -14,7 +14,8 @@ export class SystemContext<T = void> {
      */
     public transport: T;
 
-    constructor() {
+    constructor(transport: T) {
         this.auth = new Authorization();
+        this.transport = transport;
     }
 }

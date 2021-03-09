@@ -35,10 +35,8 @@ export class AuthProtectedServiceRequest2FAInput implements AuthProtectedService
   static readonly RTTI_CLASS: string = 'Request2FAInput';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth.authprotectedservice.models:Request2FAInput';
   
-  constructor(data?: {method: MFAMethodRequest}, skipDefaults?: boolean | undefined) {
-    if (!data) {
-      return;
-    }
+  constructor(data: {method: MFAMethodRequest}) {
+    
     this.method = data.method;
   }
   

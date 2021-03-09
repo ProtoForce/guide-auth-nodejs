@@ -34,14 +34,8 @@ export class AuthServiceChangePasswordInput implements AuthServiceChangePassword
   static readonly RTTI_CLASS: string = 'ChangePasswordInput';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth.authservice.models:ChangePasswordInput';
   
-  constructor(data?: {changeToken: string, password: string}, skipDefaults?: boolean | undefined) {
-    if (!data) {
-      if (!skipDefaults) {
-        this.changeToken = '';
-        this.password = '';
-      }
-      return;
-    }
+  constructor(data: {changeToken: string, password: string}) {
+    
     this.changeToken = data.changeToken;
     this.password = data.password;
   }

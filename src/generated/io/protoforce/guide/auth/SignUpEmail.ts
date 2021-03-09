@@ -55,11 +55,14 @@ export interface SignUpEmailDefn extends WithRTTI {
   * Defined at auth.signup.pfm @ 16:3
   */
 export class SignUpEmail implements SignUpEmailDefn {
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   timezone: string;
   /**
     * User email
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   email: string;
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   pass: string;
   static readonly RTTI_CLASS: string = 'Email';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth/SignUp:Email';

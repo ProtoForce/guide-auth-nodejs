@@ -15,7 +15,7 @@ import { WebSocketServerOptions } from './server.websocket';
  */
 export type HTTPServerHooks<C, T, OPTIONS = HTTPServerOptions<C, T>> = ServerHooksBase<C, T, OPTIONS>;
 
-export type onServerConnectHookData<C, T, OPTIONS> = onServerHookBase<C, T, OPTIONS> & {
+export type onServerConnectHookData<C, T, OPTIONS> = Omit<onServerHookBase<C, T, OPTIONS>, 'context'> & {
     request: wsRequest;
 }
 export type onServerConnectedHookData<C, T, OPTIONS> = onServerHookBase<C, T, OPTIONS>;

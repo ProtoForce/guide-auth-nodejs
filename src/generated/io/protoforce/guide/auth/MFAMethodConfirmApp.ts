@@ -36,10 +36,12 @@ export class MFAMethodConfirmApp implements MFAMethodConfirmAppDefn {
   /**
     * One code sample generated using the previously provided secret
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   code: string;
   /**
     * Token previously provided in the MFAMethodPending structure
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   token: string;
   static readonly RTTI_CLASS: string = 'App';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth/MFAMethodConfirm:App';
