@@ -28,7 +28,7 @@ export interface AuthProtectedServiceAddIdentityInputDefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth.authprotectedservice.models:AddIdentityInput
   * 
-  * Defined at auth.service.pfm @ 125:3
+  * Defined at auth.service.pfm @ 126:3
   */
 export class AuthProtectedServiceAddIdentityInput implements AuthProtectedServiceAddIdentityInputDefn {
   identity: SecondaryIdentity;

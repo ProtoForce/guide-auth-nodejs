@@ -28,7 +28,7 @@ export interface AuthServiceSigninInputDefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth.authservice.models:SigninInput
   * 
-  * Defined at auth.service.pfm @ 77:3
+  * Defined at auth.service.pfm @ 78:3
   */
 export class AuthServiceSigninInput implements AuthServiceSigninInputDefn {
   with_: SignIn;

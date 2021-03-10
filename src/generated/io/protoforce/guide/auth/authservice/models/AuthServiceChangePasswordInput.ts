@@ -26,7 +26,7 @@ export interface AuthServiceChangePasswordInputDefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth.authservice.models:ChangePasswordInput
   * 
-  * Defined at auth.service.pfm @ 97:3
+  * Defined at auth.service.pfm @ 98:3
   */
 export class AuthServiceChangePasswordInput implements AuthServiceChangePasswordInputDefn {
   changeToken: string;

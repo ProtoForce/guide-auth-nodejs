@@ -33,7 +33,7 @@ export interface SigninResponseConfirm2FADefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth/SigninResponse:Confirm2FA (member of ADT io.protoforce.guide.auth:SigninResponse)
   * 
-  * Defined at auth.service.pfm @ 30:3
+  * Defined at auth.service.pfm @ 31:3
   */
 export class SigninResponseConfirm2FA implements SigninResponseConfirm2FADefn {
   /**

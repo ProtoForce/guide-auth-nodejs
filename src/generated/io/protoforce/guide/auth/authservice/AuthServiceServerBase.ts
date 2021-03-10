@@ -59,7 +59,7 @@ export abstract class AuthServiceServerBase<C = void> implements ServiceDispatch
     * 
     *  Sign up for a service with provided credentials
     * 
-    * Defined at auth.service.pfm @ 72:3
+    * Defined at auth.service.pfm @ 73:3
     */
   signup(context: C, with_: SignUp): Either<AuthServiceSignupOutput, SigninSuccessResponse> | Promise<Either<AuthServiceSignupOutput, SigninSuccessResponse>> {
     throw new Error('signup method is not implemented.');
@@ -69,7 +69,7 @@ export abstract class AuthServiceServerBase<C = void> implements ServiceDispatch
     * 
     *  Sign in with provided credentials
     * 
-    * Defined at auth.service.pfm @ 77:3
+    * Defined at auth.service.pfm @ 78:3
     */
   signin(context: C, with_: SignIn): Either<AuthServiceSigninOutput, SigninResponse> | Promise<Either<AuthServiceSigninOutput, SigninResponse>> {
     throw new Error('signin method is not implemented.');
@@ -79,7 +79,7 @@ export abstract class AuthServiceServerBase<C = void> implements ServiceDispatch
     * 
     *  Confirm email
     * 
-    * Defined at auth.service.pfm @ 82:3
+    * Defined at auth.service.pfm @ 83:3
     */
   confirmEmail(context: C, code: string): Either<AuthServiceConfirmEmailOutput, GenericSuccess> | Promise<Either<AuthServiceConfirmEmailOutput, GenericSuccess>> {
     throw new Error('confirmEmail method is not implemented.');
@@ -89,7 +89,7 @@ export abstract class AuthServiceServerBase<C = void> implements ServiceDispatch
     * 
     *  Confirm phone number
     * 
-    * Defined at auth.service.pfm @ 87:3
+    * Defined at auth.service.pfm @ 88:3
     */
   confirmPhone(context: C, code: string, phone: string): Either<AuthServiceConfirmPhoneOutput, GenericSuccess> | Promise<Either<AuthServiceConfirmPhoneOutput, GenericSuccess>> {
     throw new Error('confirmPhone method is not implemented.');
@@ -99,7 +99,7 @@ export abstract class AuthServiceServerBase<C = void> implements ServiceDispatch
     * 
     *  Reset password
     * 
-    * Defined at auth.service.pfm @ 92:3
+    * Defined at auth.service.pfm @ 93:3
     */
   resetPassword(context: C, lookup: UserLookup): Either<AuthServiceResetPasswordOutput, GenericSuccess> | Promise<Either<AuthServiceResetPasswordOutput, GenericSuccess>> {
     throw new Error('resetPassword method is not implemented.');
@@ -109,7 +109,7 @@ export abstract class AuthServiceServerBase<C = void> implements ServiceDispatch
     * 
     *  Change password
     * 
-    * Defined at auth.service.pfm @ 97:3
+    * Defined at auth.service.pfm @ 98:3
     */
   changePassword(context: C, changeToken: string, password: string): Either<AuthServiceChangePasswordOutput, GenericSuccess> | Promise<Either<AuthServiceChangePasswordOutput, GenericSuccess>> {
     throw new Error('changePassword method is not implemented.');

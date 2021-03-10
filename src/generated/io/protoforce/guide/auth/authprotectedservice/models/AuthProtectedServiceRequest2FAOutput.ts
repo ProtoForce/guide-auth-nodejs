@@ -36,7 +36,7 @@ import {
   * 
   * ADT io.protoforce.guide.auth.authprotectedservice.models:Request2FAOutput
   * 
-  * Defined at auth.service.pfm @ 109:3
+  * Defined at auth.service.pfm @ 110:3
   */
 export class AuthProtectedServiceRequest2FAOutput implements WithRTTI, IRTADT<AuthProtectedServiceRequest2FAOutputTypes, AuthProtectedServiceRequest2FAOutputFlatTypes> {
   value: AuthProtectedServiceRequest2FAOutputTypes;

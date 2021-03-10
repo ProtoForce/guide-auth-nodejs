@@ -36,7 +36,7 @@ import {
   * 
   * ADT io.protoforce.guide.auth.authservice.models:ConfirmPhoneOutput
   * 
-  * Defined at auth.service.pfm @ 87:3
+  * Defined at auth.service.pfm @ 88:3
   */
 export class AuthServiceConfirmPhoneOutput implements WithRTTI, IRTADT<AuthServiceConfirmPhoneOutputTypes, AuthServiceConfirmPhoneOutputFlatTypes> {
   value: AuthServiceConfirmPhoneOutputTypes;

@@ -28,7 +28,7 @@ export interface AuthProtectedServiceRemoveIdentityInputDefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth.authprotectedservice.models:RemoveIdentityInput
   * 
-  * Defined at auth.service.pfm @ 130:3
+  * Defined at auth.service.pfm @ 131:3
   */
 export class AuthProtectedServiceRemoveIdentityInput implements AuthProtectedServiceRemoveIdentityInputDefn {
   identity: SecondaryIdentity;

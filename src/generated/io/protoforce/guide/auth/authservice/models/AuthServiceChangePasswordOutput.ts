@@ -36,7 +36,7 @@ import {
   * 
   * ADT io.protoforce.guide.auth.authservice.models:ChangePasswordOutput
   * 
-  * Defined at auth.service.pfm @ 97:3
+  * Defined at auth.service.pfm @ 98:3
   */
 export class AuthServiceChangePasswordOutput implements WithRTTI, IRTADT<AuthServiceChangePasswordOutputTypes, AuthServiceChangePasswordOutputFlatTypes> {
   value: AuthServiceChangePasswordOutputTypes;

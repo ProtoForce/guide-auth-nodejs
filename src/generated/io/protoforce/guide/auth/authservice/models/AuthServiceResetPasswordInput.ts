@@ -28,7 +28,7 @@ export interface AuthServiceResetPasswordInputDefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth.authservice.models:ResetPasswordInput
   * 
-  * Defined at auth.service.pfm @ 92:3
+  * Defined at auth.service.pfm @ 93:3
   */
 export class AuthServiceResetPasswordInput implements AuthServiceResetPasswordInputDefn {
   lookup: UserLookup;

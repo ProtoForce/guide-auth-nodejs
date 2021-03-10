@@ -23,7 +23,7 @@ export interface UserLookupPhoneDefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth/UserLookup:Phone (member of ADT io.protoforce.guide.auth:UserLookup)
   * 
-  * Defined at auth.service.pfm @ 61:3
+  * Defined at auth.service.pfm @ 62:3
   */
 export class UserLookupPhone implements UserLookupPhoneDefn {
   // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this

@@ -36,7 +36,7 @@ import {
   * 
   * ADT io.protoforce.guide.auth.authservice.models:ResetPasswordOutput
   * 
-  * Defined at auth.service.pfm @ 92:3
+  * Defined at auth.service.pfm @ 93:3
   */
 export class AuthServiceResetPasswordOutput implements WithRTTI, IRTADT<AuthServiceResetPasswordOutputTypes, AuthServiceResetPasswordOutputFlatTypes> {
   value: AuthServiceResetPasswordOutputTypes;

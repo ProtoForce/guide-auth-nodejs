@@ -48,49 +48,49 @@ import {
   * 
   * Service io.protoforce.guide.auth.authservice:AuthService
   * 
-  * Defined at auth.service.pfm @ 67:1
+  * Defined at auth.service.pfm @ 68:1
   */
 export interface AuthServiceServer<C = void> {
   /**
     * 
     *  Sign up for a service with provided credentials
     * 
-    * Defined at auth.service.pfm @ 72:3
+    * Defined at auth.service.pfm @ 73:3
     */
   signup(context: C, with_: SignUp): Either<AuthServiceSignupOutput, SigninSuccessResponse> | Promise<Either<AuthServiceSignupOutput, SigninSuccessResponse>>;
   /**
     * 
     *  Sign in with provided credentials
     * 
-    * Defined at auth.service.pfm @ 77:3
+    * Defined at auth.service.pfm @ 78:3
     */
   signin(context: C, with_: SignIn): Either<AuthServiceSigninOutput, SigninResponse> | Promise<Either<AuthServiceSigninOutput, SigninResponse>>;
   /**
     * 
     *  Confirm email
     * 
-    * Defined at auth.service.pfm @ 82:3
+    * Defined at auth.service.pfm @ 83:3
     */
   confirmEmail(context: C, code: string): Either<AuthServiceConfirmEmailOutput, GenericSuccess> | Promise<Either<AuthServiceConfirmEmailOutput, GenericSuccess>>;
   /**
     * 
     *  Confirm phone number
     * 
-    * Defined at auth.service.pfm @ 87:3
+    * Defined at auth.service.pfm @ 88:3
     */
   confirmPhone(context: C, code: string, phone: string): Either<AuthServiceConfirmPhoneOutput, GenericSuccess> | Promise<Either<AuthServiceConfirmPhoneOutput, GenericSuccess>>;
   /**
     * 
     *  Reset password
     * 
-    * Defined at auth.service.pfm @ 92:3
+    * Defined at auth.service.pfm @ 93:3
     */
   resetPassword(context: C, lookup: UserLookup): Either<AuthServiceResetPasswordOutput, GenericSuccess> | Promise<Either<AuthServiceResetPasswordOutput, GenericSuccess>>;
   /**
     * 
     *  Change password
     * 
-    * Defined at auth.service.pfm @ 97:3
+    * Defined at auth.service.pfm @ 98:3
     */
   changePassword(context: C, changeToken: string, password: string): Either<AuthServiceChangePasswordOutput, GenericSuccess> | Promise<Either<AuthServiceChangePasswordOutput, GenericSuccess>>;
 }

@@ -36,7 +36,7 @@ import {
   * 
   * ADT io.protoforce.guide.auth.authprotectedservice.models:Disable2FAOutput
   * 
-  * Defined at auth.service.pfm @ 119:3
+  * Defined at auth.service.pfm @ 120:3
   */
 export class AuthProtectedServiceDisable2FAOutput implements WithRTTI, IRTADT<AuthProtectedServiceDisable2FAOutputTypes, AuthProtectedServiceDisable2FAOutputFlatTypes> {
   value: AuthProtectedServiceDisable2FAOutputTypes;

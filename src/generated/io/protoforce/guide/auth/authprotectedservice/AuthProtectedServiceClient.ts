@@ -107,7 +107,7 @@ export class AuthProtectedServiceClient<C = void> implements AuthProtectedServic
     * 
     *  Request two factor authentication
     * 
-    * Defined at auth.service.pfm @ 109:3
+    * Defined at auth.service.pfm @ 110:3
     */
   request2FA(method: MFAMethodRequestTypes | MFAMethodRequest, _context?: C | undefined): PromiseEx<Either<AuthProtectedServiceRequest2FAOutput, MFAMethodPending>> {
     return authProtectedServiceRequest2FA({method}, this.transport, _context);
@@ -117,7 +117,7 @@ export class AuthProtectedServiceClient<C = void> implements AuthProtectedServic
     * 
     *  Confirm two factor authentication
     * 
-    * Defined at auth.service.pfm @ 114:3
+    * Defined at auth.service.pfm @ 115:3
     */
   confirm2FA(method: MFAMethodConfirmTypes | MFAMethodConfirm, _context?: C | undefined): PromiseEx<Either<AuthProtectedServiceConfirm2FAOutput, GenericSuccess>> {
     return authProtectedServiceConfirm2FA({method}, this.transport, _context);
@@ -127,7 +127,7 @@ export class AuthProtectedServiceClient<C = void> implements AuthProtectedServic
     * 
     *  Disable two factor authentication
     * 
-    * Defined at auth.service.pfm @ 119:3
+    * Defined at auth.service.pfm @ 120:3
     */
   disable2FA(_context?: C | undefined): PromiseEx<Either<AuthProtectedServiceDisable2FAOutput, GenericSuccess>> {
     return authProtectedServiceDisable2FA(this.transport, _context);
@@ -137,7 +137,7 @@ export class AuthProtectedServiceClient<C = void> implements AuthProtectedServic
     * 
     *  Add secondary identity
     * 
-    * Defined at auth.service.pfm @ 125:3
+    * Defined at auth.service.pfm @ 126:3
     */
   addIdentity(identity: SecondaryIdentityTypes | SecondaryIdentity, _context?: C | undefined): PromiseEx<Either<AuthProtectedServiceAddIdentityOutput, GenericSuccess>> {
     return authProtectedServiceAddIdentity({identity}, this.transport, _context);
@@ -147,7 +147,7 @@ export class AuthProtectedServiceClient<C = void> implements AuthProtectedServic
     * 
     *  Remove secondary identity
     * 
-    * Defined at auth.service.pfm @ 130:3
+    * Defined at auth.service.pfm @ 131:3
     */
   removeIdentity(identity: SecondaryIdentityTypes | SecondaryIdentity, _context?: C | undefined): PromiseEx<Either<AuthProtectedServiceRemoveIdentityOutput, GenericSuccess>> {
     return authProtectedServiceRemoveIdentity({identity}, this.transport, _context);
@@ -157,7 +157,7 @@ export class AuthProtectedServiceClient<C = void> implements AuthProtectedServic
     * 
     *  List known identities
     * 
-    * Defined at auth.service.pfm @ 135:3
+    * Defined at auth.service.pfm @ 136:3
     */
   listIdentities(_context?: C | undefined): PromiseEx<Either<AuthProtectedServiceListIdentitiesOutput, KnownIdentities>> {
     return authProtectedServiceListIdentities(this.transport, _context);

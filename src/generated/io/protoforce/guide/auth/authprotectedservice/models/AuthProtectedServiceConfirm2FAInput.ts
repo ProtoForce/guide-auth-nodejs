@@ -28,7 +28,7 @@ export interface AuthProtectedServiceConfirm2FAInputDefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth.authprotectedservice.models:Confirm2FAInput
   * 
-  * Defined at auth.service.pfm @ 114:3
+  * Defined at auth.service.pfm @ 115:3
   */
 export class AuthProtectedServiceConfirm2FAInput implements AuthProtectedServiceConfirm2FAInputDefn {
   method: MFAMethodConfirm;

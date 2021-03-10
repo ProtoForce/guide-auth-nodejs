@@ -59,7 +59,7 @@ export abstract class AuthProtectedServiceServerBase<C = void> implements Servic
     * 
     *  Request two factor authentication
     * 
-    * Defined at auth.service.pfm @ 109:3
+    * Defined at auth.service.pfm @ 110:3
     */
   request2FA(context: C, method: MFAMethodRequest): Either<AuthProtectedServiceRequest2FAOutput, MFAMethodPending> | Promise<Either<AuthProtectedServiceRequest2FAOutput, MFAMethodPending>> {
     throw new Error('request2FA method is not implemented.');
@@ -69,7 +69,7 @@ export abstract class AuthProtectedServiceServerBase<C = void> implements Servic
     * 
     *  Confirm two factor authentication
     * 
-    * Defined at auth.service.pfm @ 114:3
+    * Defined at auth.service.pfm @ 115:3
     */
   confirm2FA(context: C, method: MFAMethodConfirm): Either<AuthProtectedServiceConfirm2FAOutput, GenericSuccess> | Promise<Either<AuthProtectedServiceConfirm2FAOutput, GenericSuccess>> {
     throw new Error('confirm2FA method is not implemented.');
@@ -79,7 +79,7 @@ export abstract class AuthProtectedServiceServerBase<C = void> implements Servic
     * 
     *  Disable two factor authentication
     * 
-    * Defined at auth.service.pfm @ 119:3
+    * Defined at auth.service.pfm @ 120:3
     */
   disable2FA(context: C): Either<AuthProtectedServiceDisable2FAOutput, GenericSuccess> | Promise<Either<AuthProtectedServiceDisable2FAOutput, GenericSuccess>> {
     throw new Error('disable2FA method is not implemented.');
@@ -89,7 +89,7 @@ export abstract class AuthProtectedServiceServerBase<C = void> implements Servic
     * 
     *  Add secondary identity
     * 
-    * Defined at auth.service.pfm @ 125:3
+    * Defined at auth.service.pfm @ 126:3
     */
   addIdentity(context: C, identity: SecondaryIdentity): Either<AuthProtectedServiceAddIdentityOutput, GenericSuccess> | Promise<Either<AuthProtectedServiceAddIdentityOutput, GenericSuccess>> {
     throw new Error('addIdentity method is not implemented.');
@@ -99,7 +99,7 @@ export abstract class AuthProtectedServiceServerBase<C = void> implements Servic
     * 
     *  Remove secondary identity
     * 
-    * Defined at auth.service.pfm @ 130:3
+    * Defined at auth.service.pfm @ 131:3
     */
   removeIdentity(context: C, identity: SecondaryIdentity): Either<AuthProtectedServiceRemoveIdentityOutput, GenericSuccess> | Promise<Either<AuthProtectedServiceRemoveIdentityOutput, GenericSuccess>> {
     throw new Error('removeIdentity method is not implemented.');
@@ -109,7 +109,7 @@ export abstract class AuthProtectedServiceServerBase<C = void> implements Servic
     * 
     *  List known identities
     * 
-    * Defined at auth.service.pfm @ 135:3
+    * Defined at auth.service.pfm @ 136:3
     */
   listIdentities(context: C): Either<AuthProtectedServiceListIdentitiesOutput, KnownIdentities> | Promise<Either<AuthProtectedServiceListIdentitiesOutput, KnownIdentities>> {
     throw new Error('listIdentities method is not implemented.');

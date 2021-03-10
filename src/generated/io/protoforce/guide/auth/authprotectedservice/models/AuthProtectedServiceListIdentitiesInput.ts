@@ -24,7 +24,7 @@ export interface AuthProtectedServiceListIdentitiesInputDefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth.authprotectedservice.models:ListIdentitiesInput
   * 
-  * Defined at auth.service.pfm @ 135:3
+  * Defined at auth.service.pfm @ 136:3
   */
 export class AuthProtectedServiceListIdentitiesInput implements AuthProtectedServiceListIdentitiesInputDefn {
   static readonly RTTI_CLASS: string = 'ListIdentitiesInput';

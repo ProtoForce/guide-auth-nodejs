@@ -24,7 +24,7 @@ export interface AuthProtectedServiceDisable2FAInputDefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth.authprotectedservice.models:Disable2FAInput
   * 
-  * Defined at auth.service.pfm @ 119:3
+  * Defined at auth.service.pfm @ 120:3
   */
 export class AuthProtectedServiceDisable2FAInput implements AuthProtectedServiceDisable2FAInputDefn {
   static readonly RTTI_CLASS: string = 'Disable2FAInput';

@@ -28,7 +28,7 @@ export interface AuthProtectedServiceRequest2FAInputDefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth.authprotectedservice.models:Request2FAInput
   * 
-  * Defined at auth.service.pfm @ 109:3
+  * Defined at auth.service.pfm @ 110:3
   */
 export class AuthProtectedServiceRequest2FAInput implements AuthProtectedServiceRequest2FAInputDefn {
   method: MFAMethodRequest;

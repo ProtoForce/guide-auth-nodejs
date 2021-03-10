@@ -42,7 +42,7 @@ import {
   * 
   * ADT io.protoforce.guide.auth.authprotectedservice.models:AddIdentityOutput
   * 
-  * Defined at auth.service.pfm @ 125:3
+  * Defined at auth.service.pfm @ 126:3
   */
 export class AuthProtectedServiceAddIdentityOutput implements WithRTTI, IRTADT<AuthProtectedServiceAddIdentityOutputTypes, AuthProtectedServiceAddIdentityOutputFlatTypes> {
   value: AuthProtectedServiceAddIdentityOutputTypes;

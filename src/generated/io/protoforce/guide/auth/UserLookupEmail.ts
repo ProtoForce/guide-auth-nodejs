@@ -23,7 +23,7 @@ export interface UserLookupEmailDefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth/UserLookup:Email (member of ADT io.protoforce.guide.auth:UserLookup)
   * 
-  * Defined at auth.service.pfm @ 57:3
+  * Defined at auth.service.pfm @ 58:3
   */
 export class UserLookupEmail implements UserLookupEmailDefn {
   // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this

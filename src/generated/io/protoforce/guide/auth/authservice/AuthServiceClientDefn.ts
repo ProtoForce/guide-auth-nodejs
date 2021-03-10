@@ -58,49 +58,49 @@ import {
   * 
   * Service io.protoforce.guide.auth.authservice:AuthService
   * 
-  * Defined at auth.service.pfm @ 67:1
+  * Defined at auth.service.pfm @ 68:1
   */
 export interface AuthServiceClientDefn<C = void> {
   /**
     * 
     *  Sign up for a service with provided credentials
     * 
-    * Defined at auth.service.pfm @ 72:3
+    * Defined at auth.service.pfm @ 73:3
     */
   signup(with_: SignUpTypes | SignUp, _context?: C | undefined): PromiseEx<Either<AuthServiceSignupOutput, SigninSuccessResponse>>;
   /**
     * 
     *  Sign in with provided credentials
     * 
-    * Defined at auth.service.pfm @ 77:3
+    * Defined at auth.service.pfm @ 78:3
     */
   signin(with_: SignInTypes | SignIn, _context?: C | undefined): PromiseEx<Either<AuthServiceSigninOutput, SigninResponse>>;
   /**
     * 
     *  Confirm email
     * 
-    * Defined at auth.service.pfm @ 82:3
+    * Defined at auth.service.pfm @ 83:3
     */
   confirmEmail(code: string, _context?: C | undefined): PromiseEx<Either<AuthServiceConfirmEmailOutput, GenericSuccess>>;
   /**
     * 
     *  Confirm phone number
     * 
-    * Defined at auth.service.pfm @ 87:3
+    * Defined at auth.service.pfm @ 88:3
     */
   confirmPhone(code: string, phone: string, _context?: C | undefined): PromiseEx<Either<AuthServiceConfirmPhoneOutput, GenericSuccess>>;
   /**
     * 
     *  Reset password
     * 
-    * Defined at auth.service.pfm @ 92:3
+    * Defined at auth.service.pfm @ 93:3
     */
   resetPassword(lookup: UserLookupTypes | UserLookup, _context?: C | undefined): PromiseEx<Either<AuthServiceResetPasswordOutput, GenericSuccess>>;
   /**
     * 
     *  Change password
     * 
-    * Defined at auth.service.pfm @ 97:3
+    * Defined at auth.service.pfm @ 98:3
     */
   changePassword(changeToken: string, password: string, _context?: C | undefined): PromiseEx<Either<AuthServiceChangePasswordOutput, GenericSuccess>>;
 }

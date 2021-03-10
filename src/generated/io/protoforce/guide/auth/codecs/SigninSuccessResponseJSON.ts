@@ -8,4 +8,5 @@ import {
 
 export interface SigninSuccessResponseJSON {
   user: UserJSON;
+  accessToken: string;
 }

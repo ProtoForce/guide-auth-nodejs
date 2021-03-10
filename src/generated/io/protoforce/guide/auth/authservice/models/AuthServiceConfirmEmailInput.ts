@@ -25,7 +25,7 @@ export interface AuthServiceConfirmEmailInputDefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth.authservice.models:ConfirmEmailInput
   * 
-  * Defined at auth.service.pfm @ 82:3
+  * Defined at auth.service.pfm @ 83:3
   */
 export class AuthServiceConfirmEmailInput implements AuthServiceConfirmEmailInputDefn {
   code: string;

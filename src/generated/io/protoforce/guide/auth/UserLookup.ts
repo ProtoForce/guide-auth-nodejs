@@ -39,7 +39,7 @@ import {
   * 
   * ADT io.protoforce.guide.auth:UserLookup
   * 
-  * Defined at auth.service.pfm @ 49:1
+  * Defined at auth.service.pfm @ 50:1
   */
 export class UserLookup implements WithRTTI, IRTADT<UserLookupTypes, UserLookupFlatTypes> {
   value: UserLookupTypes;

@@ -14,6 +14,7 @@ import {
 
 export interface SigninSuccessResponseDefn extends WithRTTI {
   user: User;
+  accessToken: string;
   readonly RTTI_CLASS: string;
   readonly RTTI_FQN: string;
   
@@ -32,14 +33,20 @@ export interface SigninSuccessResponseDefn extends WithRTTI {
 export class SigninSuccessResponse implements SigninSuccessResponseDefn {
   // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   user: User;
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
+  accessToken: string;
   static readonly RTTI_CLASS: string = 'SigninSuccessResponse';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth:SigninSuccessResponse';
   
-  constructor(data?: {user: User}, skipDefaults?: boolean | undefined) {
+  constructor(data?: {user: User, accessToken: string}, skipDefaults?: boolean | undefined) {
     if (!data) {
+      if (!skipDefaults) {
+        this.accessToken = '';
+      }
       return;
     }
     this.user = data.user;
+    this.accessToken = data.accessToken;
   }
   
   get RTTI_CLASS(): string {
@@ -56,13 +63,15 @@ export class SigninSuccessResponse implements SigninSuccessResponseDefn {
   
   static toJSON = (value: SigninSuccessResponse): SigninSuccessResponseJSON => {
     return {
-      user: value.user.toJSON()
+      user: value.user.toJSON(),
+      accessToken: value.accessToken
     };
   }
   
   static fromJSON = (value: SigninSuccessResponseJSON): SigninSuccessResponse => {
     return new SigninSuccessResponse({
-      user: User.fromJSON(value.user)
+      user: User.fromJSON(value.user),
+      accessToken: value.accessToken
     });
   }
   

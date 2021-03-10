@@ -36,7 +36,7 @@ import {
   * 
   * ADT io.protoforce.guide.auth.authservice.models:SigninOutput
   * 
-  * Defined at auth.service.pfm @ 77:3
+  * Defined at auth.service.pfm @ 78:3
   */
 export class AuthServiceSigninOutput implements WithRTTI, IRTADT<AuthServiceSigninOutputTypes, AuthServiceSigninOutputFlatTypes> {
   value: AuthServiceSigninOutputTypes;

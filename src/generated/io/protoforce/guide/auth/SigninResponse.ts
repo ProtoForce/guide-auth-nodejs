@@ -36,7 +36,7 @@ import {
   * 
   * ADT io.protoforce.guide.auth:SigninResponse
   * 
-  * Defined at auth.service.pfm @ 22:1
+  * Defined at auth.service.pfm @ 23:1
   */
 export class SigninResponse implements WithRTTI, IRTADT<SigninResponseTypes, SigninResponseFlatTypes> {
   value: SigninResponseTypes;

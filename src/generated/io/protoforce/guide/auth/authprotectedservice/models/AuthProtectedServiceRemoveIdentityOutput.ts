@@ -42,7 +42,7 @@ import {
   * 
   * ADT io.protoforce.guide.auth.authprotectedservice.models:RemoveIdentityOutput
   * 
-  * Defined at auth.service.pfm @ 130:3
+  * Defined at auth.service.pfm @ 131:3
   */
 export class AuthProtectedServiceRemoveIdentityOutput implements WithRTTI, IRTADT<AuthProtectedServiceRemoveIdentityOutputTypes, AuthProtectedServiceRemoveIdentityOutputFlatTypes> {
   value: AuthProtectedServiceRemoveIdentityOutputTypes;

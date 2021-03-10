@@ -49,49 +49,49 @@ import {
   * 
   * Service io.protoforce.guide.auth.authprotectedservice:AuthProtectedService
   * 
-  * Defined at auth.service.pfm @ 104:1
+  * Defined at auth.service.pfm @ 105:1
   */
 export interface AuthProtectedServiceServer<C = void> {
   /**
     * 
     *  Request two factor authentication
     * 
-    * Defined at auth.service.pfm @ 109:3
+    * Defined at auth.service.pfm @ 110:3
     */
   request2FA(context: C, method: MFAMethodRequest): Either<AuthProtectedServiceRequest2FAOutput, MFAMethodPending> | Promise<Either<AuthProtectedServiceRequest2FAOutput, MFAMethodPending>>;
   /**
     * 
     *  Confirm two factor authentication
     * 
-    * Defined at auth.service.pfm @ 114:3
+    * Defined at auth.service.pfm @ 115:3
     */
   confirm2FA(context: C, method: MFAMethodConfirm): Either<AuthProtectedServiceConfirm2FAOutput, GenericSuccess> | Promise<Either<AuthProtectedServiceConfirm2FAOutput, GenericSuccess>>;
   /**
     * 
     *  Disable two factor authentication
     * 
-    * Defined at auth.service.pfm @ 119:3
+    * Defined at auth.service.pfm @ 120:3
     */
   disable2FA(context: C): Either<AuthProtectedServiceDisable2FAOutput, GenericSuccess> | Promise<Either<AuthProtectedServiceDisable2FAOutput, GenericSuccess>>;
   /**
     * 
     *  Add secondary identity
     * 
-    * Defined at auth.service.pfm @ 125:3
+    * Defined at auth.service.pfm @ 126:3
     */
   addIdentity(context: C, identity: SecondaryIdentity): Either<AuthProtectedServiceAddIdentityOutput, GenericSuccess> | Promise<Either<AuthProtectedServiceAddIdentityOutput, GenericSuccess>>;
   /**
     * 
     *  Remove secondary identity
     * 
-    * Defined at auth.service.pfm @ 130:3
+    * Defined at auth.service.pfm @ 131:3
     */
   removeIdentity(context: C, identity: SecondaryIdentity): Either<AuthProtectedServiceRemoveIdentityOutput, GenericSuccess> | Promise<Either<AuthProtectedServiceRemoveIdentityOutput, GenericSuccess>>;
   /**
     * 
     *  List known identities
     * 
-    * Defined at auth.service.pfm @ 135:3
+    * Defined at auth.service.pfm @ 136:3
     */
   listIdentities(context: C): Either<AuthProtectedServiceListIdentitiesOutput, KnownIdentities> | Promise<Either<AuthProtectedServiceListIdentitiesOutput, KnownIdentities>>;
 }

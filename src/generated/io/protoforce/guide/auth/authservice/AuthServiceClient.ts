@@ -107,7 +107,7 @@ export class AuthServiceClient<C = void> implements AuthServiceClientDefn<C>, Wi
     * 
     *  Sign up for a service with provided credentials
     * 
-    * Defined at auth.service.pfm @ 72:3
+    * Defined at auth.service.pfm @ 73:3
     */
   signup(with_: SignUpTypes | SignUp, _context?: C | undefined): PromiseEx<Either<AuthServiceSignupOutput, SigninSuccessResponse>> {
     return authServiceSignup({with_}, this.transport, _context);
@@ -117,7 +117,7 @@ export class AuthServiceClient<C = void> implements AuthServiceClientDefn<C>, Wi
     * 
     *  Sign in with provided credentials
     * 
-    * Defined at auth.service.pfm @ 77:3
+    * Defined at auth.service.pfm @ 78:3
     */
   signin(with_: SignInTypes | SignIn, _context?: C | undefined): PromiseEx<Either<AuthServiceSigninOutput, SigninResponse>> {
     return authServiceSignin({with_}, this.transport, _context);
@@ -127,7 +127,7 @@ export class AuthServiceClient<C = void> implements AuthServiceClientDefn<C>, Wi
     * 
     *  Confirm email
     * 
-    * Defined at auth.service.pfm @ 82:3
+    * Defined at auth.service.pfm @ 83:3
     */
   confirmEmail(code: string, _context?: C | undefined): PromiseEx<Either<AuthServiceConfirmEmailOutput, GenericSuccess>> {
     return authServiceConfirmEmail({code}, this.transport, _context);
@@ -137,7 +137,7 @@ export class AuthServiceClient<C = void> implements AuthServiceClientDefn<C>, Wi
     * 
     *  Confirm phone number
     * 
-    * Defined at auth.service.pfm @ 87:3
+    * Defined at auth.service.pfm @ 88:3
     */
   confirmPhone(code: string, phone: string, _context?: C | undefined): PromiseEx<Either<AuthServiceConfirmPhoneOutput, GenericSuccess>> {
     return authServiceConfirmPhone({code, phone}, this.transport, _context);
@@ -147,7 +147,7 @@ export class AuthServiceClient<C = void> implements AuthServiceClientDefn<C>, Wi
     * 
     *  Reset password
     * 
-    * Defined at auth.service.pfm @ 92:3
+    * Defined at auth.service.pfm @ 93:3
     */
   resetPassword(lookup: UserLookupTypes | UserLookup, _context?: C | undefined): PromiseEx<Either<AuthServiceResetPasswordOutput, GenericSuccess>> {
     return authServiceResetPassword({lookup}, this.transport, _context);
@@ -157,7 +157,7 @@ export class AuthServiceClient<C = void> implements AuthServiceClientDefn<C>, Wi
     * 
     *  Change password
     * 
-    * Defined at auth.service.pfm @ 97:3
+    * Defined at auth.service.pfm @ 98:3
     */
   changePassword(changeToken: string, password: string, _context?: C | undefined): PromiseEx<Either<AuthServiceChangePasswordOutput, GenericSuccess>> {
     return authServiceChangePassword({changeToken, password}, this.transport, _context);

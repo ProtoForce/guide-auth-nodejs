@@ -36,7 +36,7 @@ import {
   * 
   * ADT io.protoforce.guide.auth.authprotectedservice.models:Confirm2FAOutput
   * 
-  * Defined at auth.service.pfm @ 114:3
+  * Defined at auth.service.pfm @ 115:3
   */
 export class AuthProtectedServiceConfirm2FAOutput implements WithRTTI, IRTADT<AuthProtectedServiceConfirm2FAOutputTypes, AuthProtectedServiceConfirm2FAOutputFlatTypes> {
   value: AuthProtectedServiceConfirm2FAOutputTypes;

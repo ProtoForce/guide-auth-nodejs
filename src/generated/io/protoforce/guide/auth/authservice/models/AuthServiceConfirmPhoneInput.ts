@@ -26,7 +26,7 @@ export interface AuthServiceConfirmPhoneInputDefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth.authservice.models:ConfirmPhoneInput
   * 
-  * Defined at auth.service.pfm @ 87:3
+  * Defined at auth.service.pfm @ 88:3
   */
 export class AuthServiceConfirmPhoneInput implements AuthServiceConfirmPhoneInputDefn {
   code: string;

@@ -36,7 +36,7 @@ import {
   * 
   * ADT io.protoforce.guide.auth.authservice.models:ConfirmEmailOutput
   * 
-  * Defined at auth.service.pfm @ 82:3
+  * Defined at auth.service.pfm @ 83:3
   */
 export class AuthServiceConfirmEmailOutput implements WithRTTI, IRTADT<AuthServiceConfirmEmailOutputTypes, AuthServiceConfirmEmailOutputFlatTypes> {
   value: AuthServiceConfirmEmailOutputTypes;

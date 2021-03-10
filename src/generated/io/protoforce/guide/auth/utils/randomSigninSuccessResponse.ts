@@ -3,6 +3,9 @@
 // package io.protoforce.guide.auth.utils
 
 import {
+  Random
+} from '../../../../../irt';
+import {
   SigninSuccessResponse
 } from '../SigninSuccessResponse';
 import {
@@ -11,6 +14,7 @@ import {
 
 export function randomSigninSuccessResponse(): SigninSuccessResponse {
   return new SigninSuccessResponse({
-    user: randomUser()
+    user: randomUser(),
+    accessToken: Random.nextString()
   });
 }

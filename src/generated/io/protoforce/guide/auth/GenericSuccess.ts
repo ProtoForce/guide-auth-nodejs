@@ -24,7 +24,7 @@ export interface GenericSuccessDefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth:GenericSuccess
   * 
-  * Defined at auth.service.pfm @ 14:1
+  * Defined at auth.service.pfm @ 15:1
   */
 export class GenericSuccess implements GenericSuccessDefn {
   // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
