@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["esnext", "ES6", "DOM"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@auth/irt": ["./generated/irt"],
+      "@auth/irt-node": ["./generated/irt-node"],
+      "@auth/service": ["./generated/io/protoforce/guide/auth"],
+    },
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node", "jest"]
+  },
+  "include": [
+    "./src/server/*.ts"
+  ],
+  "exclude": [
+    "./src/generated/**.*",
+    "node_modules"
+  ]
+}
