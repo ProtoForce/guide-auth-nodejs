@@ -28,6 +28,7 @@ export class OAuthDataImpl implements OAuthData {
   /**
     * OAuth token
     */
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   accessToken: string;
   static readonly RTTI_CLASS: string = 'OAuthData';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth:OAuthData';

@@ -20,7 +20,7 @@ export interface SMSServerConfigDefn extends WithRTTI {
 /**
   * Class io.protoforce.guide.auth:SMSServerConfig
   * 
-  * Defined at config.pfm @ 45:1
+  * Defined at config.pfm @ 47:1
   */
 export class SMSServerConfig implements SMSServerConfigDefn {
   // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this

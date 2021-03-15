@@ -20,7 +20,7 @@ import {
 
 export class ClientConfigs {
   /**
-    * Defined at config.pfm @ 65:5
+    * Defined at config.pfm @ 67:5
     */
   static readonly local: ClientConfig = new ClientConfig({
     github: new GithubClientConfig({

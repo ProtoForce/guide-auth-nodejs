@@ -21,7 +21,7 @@ export interface GoogleClientConfigDefn extends WithRTTI {
 /**
   * Class io.protoforce.guide.auth:GoogleClientConfig
   * 
-  * Defined at config.pfm @ 6:1
+  * Defined at config.pfm @ 8:1
   */
 export class GoogleClientConfig implements GoogleClientConfigDefn {
   // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this

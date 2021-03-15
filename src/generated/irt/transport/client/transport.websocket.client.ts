@@ -39,7 +39,7 @@ export class WebSocketClientTransport<C, ZC = unknown> implements ClientSocketTr
     protected requests: {[key: string]: DeferredPromise};
     protected buzzers: {[key: string]: ServiceDispatcher<ZC>};
 
-    public onStatusChanged: (connected: boolean) => void;
+    public onStatusChanged?: (connected: boolean) => void;
 
     constructor(
         endpoint: string,

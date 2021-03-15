@@ -43,7 +43,7 @@ export interface ClientConfigDefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth:ClientConfig
   * 
-  * Defined at config.pfm @ 53:1
+  * Defined at config.pfm @ 55:1
   */
 export class ClientConfig implements ClientConfigDefn {
   /**

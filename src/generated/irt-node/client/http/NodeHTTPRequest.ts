@@ -11,7 +11,11 @@ import {
 
 export function doNodeHTTPRequest(request: HTTPClientRequest, options: HttpRequestOptions): PromiseEx<HTTPClientResponse> {
     const { logger } = options;
-    const controller = new AbortController();
+    const controller: {
+        abort?: () => void
+    } = {
+    };
+
     const promise: PromiseEx<HTTPClientResponse> = new Promise(async (resolve, reject) => {
         try {
             const method = request.method;
@@ -66,13 +70,13 @@ export function doNodeHTTPRequest(request: HTTPClientRequest, options: HttpReque
                     });
                 });
             }
-        
+
             let req: http.ClientRequest; // RedirectableRequest<http.ClientRequest, http.IncomingMessage>; // http.ClientRequest;
             switch (url.protocol) {
                 case 'http:':
                     req = http.request(opts, process);
                     break;
-                    
+
                 case 'https:':
                     req = https.request(opts, process);
                     break;
@@ -81,11 +85,12 @@ export function doNodeHTTPRequest(request: HTTPClientRequest, options: HttpReque
                     reject (new Error(`Unsupported protocol '${url.protocol}'.`));
                     return;
             }
-    
+            controller.abort = req.destroy;
+
             req.on('error', err => {
                 reject (new Error(`Failure during request ${err}`));
             });
-        
+
             if (payload && method !== 'GET' && method !== 'HEAD' ) {
                 req.write(payload);
             }
@@ -94,6 +99,6 @@ export function doNodeHTTPRequest(request: HTTPClientRequest, options: HttpReque
             reject(err);
         }
     });
-    promise.cancel = controller.abort;
+    promise.cancel = () => controller.abort ? controller.abort() : {};
     return promise;
 }

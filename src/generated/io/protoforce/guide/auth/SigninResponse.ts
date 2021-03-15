@@ -137,11 +137,12 @@ export class SigninResponse implements WithRTTI, IRTADT<SigninResponseTypes, Sig
   static fromJSON = (value: SigninResponseJSON): SigninResponse => {
     const keyarr = Array.isArray(value.$class) ? value.$class : [value.$class];
     const key = keyarr[0];
-    const val = (keyarr.length > 1 ?
-      {
-        ...value,
-        $class: keyarr.length === 2 ? keyarr[1] : keyarr.slice(1)
-      } : value) as SigninResponseJSON;
+    const val = keyarr.length > 1 ?
+       Object.assign(
+         {},
+         value,
+         {'$class': keyarr.length === 2 ? keyarr[1] : keyarr.slice(1)}
+       ) : value;
              
     switch (key) {
       case 'SigninSuccessResponse': {

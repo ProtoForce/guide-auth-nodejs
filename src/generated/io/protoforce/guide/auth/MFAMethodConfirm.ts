@@ -115,11 +115,12 @@ export class MFAMethodConfirm implements WithRTTI, IRTADT<MFAMethodConfirmTypes,
   static fromJSON = (value: MFAMethodConfirmJSON): MFAMethodConfirm => {
     const keyarr = Array.isArray(value.$method) ? value.$method : [value.$method];
     const key = keyarr[0];
-    const val = (keyarr.length > 1 ?
-      {
-        ...value,
-        $method: keyarr.length === 2 ? keyarr[1] : keyarr.slice(1)
-      } : value) as MFAMethodConfirmJSON;
+    const val = keyarr.length > 1 ?
+       Object.assign(
+         {},
+         value,
+         {'$method': keyarr.length === 2 ? keyarr[1] : keyarr.slice(1)}
+       ) : value;
              
     switch (key) {
       case 'App': {

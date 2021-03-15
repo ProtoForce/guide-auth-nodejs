@@ -24,7 +24,7 @@ export interface TwitterServerConfigDefn extends WithRTTI {
 /**
   * Class io.protoforce.guide.auth:TwitterServerConfig
   * 
-  * Defined at config.pfm @ 20:1
+  * Defined at config.pfm @ 22:1
   */
 export class TwitterServerConfig implements TwitterServerConfigDefn {
   // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this

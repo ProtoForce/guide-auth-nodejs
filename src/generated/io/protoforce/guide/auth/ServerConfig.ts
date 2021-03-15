@@ -50,7 +50,7 @@ export interface ServerConfigDefn extends WithRTTI {
   * 
   * Class io.protoforce.guide.auth:ServerConfig
   * 
-  * Defined at config.pfm @ 87:1
+  * Defined at config.pfm @ 89:1
   */
 export class ServerConfig implements ServerConfigDefn {
   // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this

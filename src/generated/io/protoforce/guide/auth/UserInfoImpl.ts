@@ -13,6 +13,7 @@ import {
 } from './codecs/UserInfoImplJSON';
 
 export class UserInfoImpl implements UserInfo {
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   name: string;
   static readonly RTTI_CLASS: string = 'UserInfo';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth:UserInfo';

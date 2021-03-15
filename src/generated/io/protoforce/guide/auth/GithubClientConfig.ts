@@ -20,7 +20,7 @@ export interface GithubClientConfigDefn extends WithRTTI {
 /**
   * Class io.protoforce.guide.auth:GithubClientConfig
   * 
-  * Defined at config.pfm @ 25:1
+  * Defined at config.pfm @ 27:1
   */
 export class GithubClientConfig implements GithubClientConfigDefn {
   // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this

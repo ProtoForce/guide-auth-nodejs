@@ -22,7 +22,7 @@ export interface TokensServerConfigDefn extends WithRTTI {
 /**
   * Class io.protoforce.guide.auth:TokensServerConfig
   * 
-  * Defined at config.pfm @ 34:1
+  * Defined at config.pfm @ 36:1
   */
 export class TokensServerConfig implements TokensServerConfigDefn {
   // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this

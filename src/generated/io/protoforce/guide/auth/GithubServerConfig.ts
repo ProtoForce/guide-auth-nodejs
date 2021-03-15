@@ -24,7 +24,7 @@ export interface GithubServerConfigDefn extends WithRTTI {
 /**
   * Class io.protoforce.guide.auth:GithubServerConfig
   * 
-  * Defined at config.pfm @ 29:1
+  * Defined at config.pfm @ 31:1
   */
 export class GithubServerConfig implements GithubServerConfigDefn {
   // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this

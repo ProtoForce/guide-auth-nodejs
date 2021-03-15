@@ -13,6 +13,7 @@ import {
 } from './codecs/SignupAttributesImplJSON';
 
 export class SignupAttributesImpl implements SignupAttributes {
+  // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this
   timezone: string;
   static readonly RTTI_CLASS: string = 'SignupAttributes';
   static readonly RTTI_FQN: string = 'io.protoforce.guide.auth:SignupAttributes';

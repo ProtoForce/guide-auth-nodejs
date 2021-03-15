@@ -23,7 +23,7 @@ function extractField(
     }
 
     let pathObjects = [{ key: '', obj: payload }];
-    let value: {[key: string]: unknown} | unknown = payload;
+    let value: {[key: string]: unknown} = payload;
 
     for (let i = 0; i < path.length; i++) {
         const f = path[i];

@@ -247,11 +247,12 @@ export class SignIn implements WithRTTI, IRTADT<SignInTypes, SignInFlatTypes> {
   static fromJSON = (value: SignInJSON): SignIn => {
     const keyarr = Array.isArray(value.$method) ? value.$method : [value.$method];
     const key = keyarr[0];
-    const val = (keyarr.length > 1 ?
-      {
-        ...value,
-        $method: keyarr.length === 2 ? keyarr[1] : keyarr.slice(1)
-      } : value) as SignInJSON;
+    const val = keyarr.length > 1 ?
+       Object.assign(
+         {},
+         value,
+         {'$method': keyarr.length === 2 ? keyarr[1] : keyarr.slice(1)}
+       ) : value;
              
     switch (key) {
       case 'EmailPass': {

@@ -229,11 +229,12 @@ export class SignUp implements WithRTTI, IRTADT<SignUpTypes, SignUpFlatTypes> {
   static fromJSON = (value: SignUpJSON): SignUp => {
     const keyarr = Array.isArray(value.$method) ? value.$method : [value.$method];
     const key = keyarr[0];
-    const val = (keyarr.length > 1 ?
-      {
-        ...value,
-        $method: keyarr.length === 2 ? keyarr[1] : keyarr.slice(1)
-      } : value) as SignUpJSON;
+    const val = keyarr.length > 1 ?
+       Object.assign(
+         {},
+         value,
+         {'$method': keyarr.length === 2 ? keyarr[1] : keyarr.slice(1)}
+       ) : value;
              
     switch (key) {
       case 'Email': {

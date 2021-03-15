@@ -22,7 +22,7 @@ export interface EmailServerConfigDefn extends WithRTTI {
 /**
   * Class io.protoforce.guide.auth:EmailServerConfig
   * 
-  * Defined at config.pfm @ 39:1
+  * Defined at config.pfm @ 41:1
   */
 export class EmailServerConfig implements EmailServerConfigDefn {
   // @ts-ignore We allow deliberate skipping of defaults, suppress the error about this

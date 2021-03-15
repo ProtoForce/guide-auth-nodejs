@@ -115,11 +115,12 @@ export class MFAMethodRequest implements WithRTTI, IRTADT<MFAMethodRequestTypes,
   static fromJSON = (value: MFAMethodRequestJSON): MFAMethodRequest => {
     const keyarr = Array.isArray(value.$method) ? value.$method : [value.$method];
     const key = keyarr[0];
-    const val = (keyarr.length > 1 ?
-      {
-        ...value,
-        $method: keyarr.length === 2 ? keyarr[1] : keyarr.slice(1)
-      } : value) as MFAMethodRequestJSON;
+    const val = keyarr.length > 1 ?
+       Object.assign(
+         {},
+         value,
+         {'$method': keyarr.length === 2 ? keyarr[1] : keyarr.slice(1)}
+       ) : value;
              
     switch (key) {
       case 'App': {
